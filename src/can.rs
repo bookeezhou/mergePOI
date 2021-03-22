@@ -1,5 +1,4 @@
-#![allow(non_snake_case)]
-#![allow(unused_assignments)]
+
 
 // 加载行政区划表和 POI 数据
 
@@ -74,7 +73,7 @@ impl CanConvert {
         for val in self.nation_coding_dic.values() {
             let refVal = val.borrow();
             let val_to_slice = refVal.as_slice();
-            writeln!(f, "{}", val_to_slice.join(","));
+            writeln!(f, "{}", val_to_slice.join("/"));
         }
         
     }
